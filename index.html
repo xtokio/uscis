@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USCIS | Civics test</title>
+  <link rel="stylesheet" href="/assets/css/sweetalert2.min.css">
+  <link rel="stylesheet" href="/assets/css/vanillatoasts.css"/>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body id="body-pd" class="">
+  <div id="navbar" class="l-navbar">
+    <nav class="nav">
+        <div>
+            <div id="nav-toggle" class="nav__brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-diamond" style="margin-right: 21px;" viewBox="0 0 16 16">
+                    <path d="M7.987 16a1.526 1.526 0 0 1-1.07-.448L.45 9.082a1.531 1.531 0 0 1 0-2.165L6.917.45a1.531 1.531 0 0 1 2.166 0l6.469 6.468A1.526 1.526 0 0 1 16 8.013a1.526 1.526 0 0 1-.448 1.07l-6.47 6.469A1.526 1.526 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0zM8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873L8.722 8zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873L8 8.722zM7.278 8 4.044 4.766 1.17 7.639a.511.511 0 0 0 0 .722l2.874 2.873L7.278 8z"/>
+                </svg>
+                <img src="/assets/img/logo.svg" style="height: 40px;"/>
+            </div>
+            <div class="nav__list">
+              <div  class="nav__link collapse">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="color: var(--theme-bg-color); margin-left: -4px;">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+                  <span id="txt_username" data-user-id="1" class="nav__name">Luis Gomez</span>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down collapse__link" viewBox="0 0 16 16" style="color: var(--theme-bg-color); margin-left: -4px;">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+
+                  <ul class="collapse__menu">
+                      <a href="#" class="collapse__sublink">[I'm from Indiana]</a><br>
+                  </ul>
+              </div>
+
+                <a href="#" id="lnk_show_all" class="nav__link active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16" style="color: var(--theme-bg-color); margin-left: -4px;">
+                        <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                    </svg>
+                    <span class="nav__name">Show all</span>
+                </a>
+
+                <a href="#" id="lnk_show_random" class="nav__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16" style="color: var(--theme-bg-color); margin-left: -4px;">
+                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                    </svg>
+                    <span class="nav__name">Show random</span>
+                </a>
+
+            </div>
+        </div>
+
+        <a href="/" class="nav__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" style="color: var(--theme-bg-color); margin-left: -4px;">
+            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+          </svg>
+          <span class="nav__name">Log Out</span>
+        </a>
+    </nav>
+  </div>
+
+  <div class="container">
+
+    <div class="header">
+     <div class="logo">
+      <h2></h2> <small style="margin: 5px 0 0 5px;">Civics test [v0.1.0]</small>
+     </div>
+
+     <div class="header-menu">
+
+        <div class="search-menu">
+            <div class="search-bar">
+                <input id="txt_search" type="number" class="search-box" placeholder="Search" autofocus />
+            </div>
+        </div>
+
+     </div>
+
+    </div>
+
+    <div class="wrapper">
+      <div class="main-container">        
+        <div id="main" class="searched-eforms"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/assets/js/vendor/jquery.min.js"></script>
+  <script src="/assets/js/vendor/loadingoverlay.js"></script>
+  <script src="/assets/js/vendor/sweetalert2.min.js"></script>
+  <script src="/assets/js/vanillatoasts.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+        $.LoadingOverlaySetup({
+            color           : "rgba(0, 0, 0, 0.8)",
+            image           : "/assets/img/spinner.svg",
+            maxSize         : "80px",
+            minSize         : "20px",
+            resizeInterval  : 0,
+            size            : "100%"
+        });
+        // Show full page LoadingOverlay
+        //$.LoadingOverlay("show");
+
+        //Close the LoadingOverlay
+        //$.LoadingOverlay("hide");
+
+        $(document).on("click","[data-load-link='load']",async function(e){
+          e.preventDefault();
+
+          // $.LoadingOverlay("show");
+
+          let link = $(this).attr("data-link");
+          await App.load_page(link).catch(message => App.show_error(message));
+          window.history.pushState({}, null, "/");
+
+          // $.LoadingOverlay("hide");
+        });
+
+        App.show_all();
+
+        $("#lnk_show_all").on("click",function(){
+            App.show_all();
+        });
+        $("#lnk_show_random").on("click",function(){
+            App.show_random();
+        });
+
+        // Search
+        $("#txt_search").keyup(async function(e){
+            if(e.keyCode == 13)
+            {
+                let search = $.trim($(this).val());
+                $("#txt_search").val("");
+
+                if(search.length > 0)
+                    App.show_search(search);
+                else
+                    App.show_all();
+            }
+        });
+
+    });
+  </script>
+</body>
+</html>
